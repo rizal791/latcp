@@ -12,5 +12,5 @@ int main(){
     }
     cout<<"min : "<< *A.begin();
     cout<<"max : "<< *A.rbegin();
-    
+    cout<<"rejul"<<endl;
 }

@@ -10,8 +10,8 @@ int main(){
         {
             genap++;
         }else 
-        ganjil++; 
+        ganjil++;
     }
     cout<<genap<<endl;
-    cout<<ganjil<<endl;
+    cout<<ganjil<<endl; 
 }
