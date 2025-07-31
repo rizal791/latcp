@@ -14,5 +14,4 @@ int main(){
     cout<< A.top(); // urutan terakhir
     A.pop(); // buang urutan terakhir
     cout<< A.top();
-    
 }
