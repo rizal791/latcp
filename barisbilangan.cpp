@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
-using  namespace std;
+using namespace std;
+
 /*
   ____ ___  ______   __  ____   _    ____ _____ _____        
  / ___/ _ \|  _ \ \ / / |  _ \ / \  / ___|_   _| ____|
@@ -16,13 +17,23 @@ using  namespace std;
   `---'
   
 */
+typedef long long ll;
+
 int main(){
-    int N,A,B,C;
-    cin>>N>>A>>B>>C;
-    if ((N%A==0&&N%B!=0)||(N%C==0))
+    ios_base::sync_with_stdio(false); 
+    cin.tie(NULL);
+
+    ll N,A,B,X;
+    int cnt=0;
+    cin>>N>>A>>B;
+
+    for (ll i = 0; i < N; i++)
     {
-        cout<<"YES"<<endl;
-    }else
-    cout<<"NO"<<endl;
+        if ((i%A==0)||(i%B==0))
+        {
+            cnt++;
+        }
+    }
+    cout<<cnt;
     
 }
