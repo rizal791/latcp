@@ -19,21 +19,33 @@ using namespace std;
 */
 typedef long long ll;
 
+ll gcd(ll a, ll b) {
+    if (b == 0) {
+        return a;
+    } else {
+        return gcd(b, a % b);
+    }
+}
+
+ll lcm(ll a, ll b) {
+    return a / gcd(a, b) * b;
+}
+
+
+
 int main(){
     ios_base::sync_with_stdio(false); 
     cin.tie(NULL);
 
-    ll N,A,B,X;
-    int cnt=0;
+    ll N,X;
+    int A,B;
     cin>>N>>A>>B;
 
-    for (ll i = 0; i < N; i++)
-    {
-        if ((i%A==0)||(i%B==0))
-        {
-            cnt++;
-        }
-    }
-    cout<<cnt;
+    ll cntA = (N - 1) / A + 1;
+    ll cntB = (N - 1) / B + 1;
+    ll cntAB = (N - 1) / lcm(A, B) + 1;
+
+    cout << (cntA + cntB - cntAB) <<endl;
+    
     
 }
